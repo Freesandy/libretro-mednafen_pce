@@ -15,13 +15,6 @@
 #define strcasecmp _stricmp
 #endif
 
-#define GET_FDATA(fp) (fp.f_data)
-#define GET_FSIZE(fp) (fp.f_size)
-#define GET_FEXTS(fp) (fp.f_ext)
-#define GET_FDATA_PTR(fp) (fp->data)
-#define GET_FSIZE_PTR(fp) (fp->size)
-#define GET_FEXTS_PTR(fp) (fp->ext)
-
 template <typename T> 
 static INLINE T min_T(T x, T y) 
 { 
@@ -49,8 +42,6 @@ extern MDFNGI *MDFNGameInfo;
 void MDFN_PrintError(const char *format, ...);
 void MDFN_printf(const char *format, ...);
 void MDFN_DispMessage(const char *format, ...);
-
-void MDFN_DebugPrintReal(const char *file, const int line, const char *format, ...);
 
 void MDFN_LoadGameCheats(void *override);
 void MDFN_FlushGameCheats(int nosave);
